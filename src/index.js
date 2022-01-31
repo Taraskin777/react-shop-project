@@ -30,7 +30,7 @@ const App = () => {
     return (
         <>
             <Header title="React" id={1} />
-          <Text title="App.js" id={2}/>
+          <Header title="App.js" id={2} />
             <Text />
         </>
     )
