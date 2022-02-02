@@ -27,7 +27,7 @@ const Text = () => {
    )
 }
 
-const App = () => {
+export const App = () => {
    return (
        <>
            <Header title="React" id={1} />
