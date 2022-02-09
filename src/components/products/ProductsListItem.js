@@ -1,22 +1,27 @@
 import { Button, Card, CardActions, CardContent } from '@mui/material'
 import React from 'react'
+import './ProductsListItem.css'
 
 export const ProductsListItem = ({
-    name, 
+    name,
     description,
     type,
     capacity,
     price,
+    image,
 }) => {
     return (
         <>
             <Card>
                 <CardContent>
+                    <div className="product-img">
+                        <img src={image} alt="" />
+                    </div>
                     <h4>{name}</h4>
                     <p>{description}</p>
-                    <div>Type: {type}</div>
-                    <div>Capacity: {capacity}</div>
-                    <div>{price} $</div>
+                    <div className="product-features">Type: {type}</div>
+                    <div className="product-features">Capacity: {capacity}</div>
+                    <div className="product-price">{price} $</div>
                 </CardContent>
                 <CardActions>
                     <Button variant="outlined">Add to cart</Button>
