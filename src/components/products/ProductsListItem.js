@@ -1,6 +1,7 @@
 import { Button, Card, CardActions, CardContent } from '@mui/material'
 import React from 'react'
 import './ProductsListItem.css'
+import PropTypes from 'prop-types'
 
 export const ProductsListItem = ({
     name,
@@ -29,4 +30,17 @@ export const ProductsListItem = ({
             </Card>
         </>
     )
+}
+
+ProductsListItem.propTypes = {
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    type: PropTypes.string.isRequired,
+    capacity: PropTypes.number.isRequired,
+    price: PropTypes.number.isRequired,
+    image: PropTypes.string,
+}
+
+ProductsListItem.defaultProps = {
+    description: "No description..."
 }
