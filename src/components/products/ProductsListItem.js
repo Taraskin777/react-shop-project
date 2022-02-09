@@ -24,7 +24,7 @@ export const ProductsListItem = ({
                     <div className="product-features">Capacity: {capacity}</div>
                     <div className="product-price">{price} $</div>
                 </CardContent>
-                <CardActions>
+                <CardActions className='wrap-btn-add-to-cart'>
                     <Button variant="outlined">Add to cart</Button>
                 </CardActions>
             </Card>
