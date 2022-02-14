@@ -20,7 +20,7 @@ export class ProductsListItem extends Component {
         productCount: 1,
     }
 
-    onIncrementClick() {
+    onIncrementClick = () => {
         console.log(this)
         this.setState((prevState) => ({
             productCount: prevState.productCount + 1,
@@ -53,7 +53,7 @@ export class ProductsListItem extends Component {
                             ></TextField>
                             <Button
                                 variant="contained"
-                                onClick={()=>this.onIncrementClick()}
+                                onClick={this.onIncrementClick}
                             >
                                 +
                             </Button>
