@@ -18,6 +18,11 @@ export const ProductsListItem = ({
     image,
 }) => {
     const [count, setCount] = useState(1)
+    const [color, setColor] = useState('green')
+
+    const changeColor = () => {
+        setColor(color === 'red' ? 'green' : 'red')
+    }
 
     const onDecrement = () => {
         setCount(count - 1)
@@ -36,6 +41,10 @@ export const ProductsListItem = ({
                     </div>
                     <h4>{name}</h4>
                     <p>{description}</p>
+                    <div>Color:{color}</div>
+                    <Button variant="contained" onClick={changeColor}>
+                        Change color
+                    </Button>
                     <div className="product-features">Type: {type}</div>
                     <div className="product-features">Capacity: {capacity}</div>
                     <div className="product-price">{price} $</div>
