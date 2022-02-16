@@ -34,6 +34,7 @@ export class ProductsListItem extends Component {
             productCount: prevState.productCount - 1,
         }))
     }
+    
     changeColor = () => {
         this.setState({
             color: 'red',
