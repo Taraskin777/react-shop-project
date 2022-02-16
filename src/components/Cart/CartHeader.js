@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-export const CartHeader = () => {
+export const CartHeader = ({
+    cardData
+}) => {
+   
+
     return (
         <div>
-            <div>0</div>
-            <div>$0</div>
+            <div>{cardData.totalCount}</div>
+            <div>$ { cardData.totalPrice}</div>
         </div>
     )
 }

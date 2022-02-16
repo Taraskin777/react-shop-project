@@ -18,7 +18,6 @@ export const ProductsListItem = ({
     image,
 }) => {
     const [count, setCount] = useState(1)
- 
 
     const onDecrement = () => {
         setCount(count - 1)
@@ -28,6 +27,8 @@ export const ProductsListItem = ({
         setCount(count + 1)
     }
 
+
+    
     return (
         <>
             <Card>
@@ -37,7 +38,7 @@ export const ProductsListItem = ({
                     </div>
                     <h4>{name}</h4>
                     <p>{description}</p>
-                   
+
                     <div className="product-features">Type: {type}</div>
                     <div className="product-features">Capacity: {capacity}</div>
                     <div className="product-price">{price} $</div>
