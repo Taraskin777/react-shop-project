@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 
-export const CartHeader = ({
-    cardData
-}) => {
-   
-
+export const CartHeader = ({ productsInCart }) => {
     return (
         <div>
-            <div>{cardData.totalCount}</div>
-            <div>$ { cardData.totalPrice}</div>
+            {Object.keys(productsInCart).map((productId) => (
+                <div key={productId}>
+                    {productId} : {productsInCart[productId]}
+                </div>
+            ))}
         </div>
     )
 }

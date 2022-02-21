@@ -6,21 +6,24 @@ import { Footer } from 'containers/Footer/Footer'
 import { productsArray } from 'components/products/productsArray'
 
 export const App = () => {
-    const [cardData, setCardData] = useState({
-        totalCount: 0,
-        totalPrice: 0,
+    const [productsInCart, setproductsInCart] = useState({
+        1: 5,
+        2: 2,
     })
 
-    const adProductToCart = (count, price) =>
-        setCardData((prevState) => ({
-            totalCount: prevState.totalCount + count,
-            totalPrice: prevState.totalPrice + price * count,
-        }))
+    
+   
+
+    
+
+
+
+    const adProductToCart = (count, price) => {}
 
     return (
         <>
             <CssBaseline />
-            <Header cardData={cardData} />
+            <Header productsInCart={productsInCart} />
             <Main adProductToCart={adProductToCart} />
             <Footer />
         </>
