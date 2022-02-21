@@ -5,7 +5,6 @@ import { Grid } from '@mui/material'
 import { ProductsListItem } from './ProductsListItem'
 import { productsArray } from './productsArray'
 
-
 const useStyles = makeStyles({
     title: {
         margin: '30px 0',
@@ -13,7 +12,7 @@ const useStyles = makeStyles({
     },
 })
 
-export const ProductList = () => {
+export const ProductList = ({ adProductToCart }) => {
     const classes = useStyles()
     return (
         <>
@@ -50,6 +49,7 @@ export const ProductList = () => {
                                 capacity={capacity}
                                 type={type}
                                 price={price}
+                                adProductToCart={adProductToCart}
                             />
                         </Grid>
                     )
