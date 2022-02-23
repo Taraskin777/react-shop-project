@@ -4,21 +4,20 @@ import { Header } from 'containers/Header/Header'
 import { Main } from 'containers/Main/Main'
 import { Footer } from 'containers/Footer/Footer'
 import { productsArray } from 'components/products/productsArray'
+import { Button } from '@mui/material'
 
 export const App = () => {
     const [productsInCart, setproductsInCart] = useState({
-        1: 5,
+        1: 2,
         2: 2,
     })
 
-    
+    const adProductToCart = (id, count) => {
+        setproductsInCart((prevState) => (Object.assign({}, prevState, { [id]: prevState[id] + count, })
+        ))
+    }
+
    
-
-    
-
-
-
-    const adProductToCart = (count, price) => {}
 
     return (
         <>

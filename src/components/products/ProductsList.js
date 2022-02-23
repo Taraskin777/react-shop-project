@@ -40,9 +40,11 @@ export const ProductList = ({ adProductToCart }) => {
                         type,
                         price,
                         image,
+                        
                     }) => (
                         <Grid item xs={12} sm={6} md={4} key={id}>
                             <ProductsListItem
+                                id={id}
                                 image={image}
                                 name={name}
                                 description={description}
