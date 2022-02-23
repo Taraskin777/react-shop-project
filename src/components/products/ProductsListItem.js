@@ -11,7 +11,7 @@ import PropTypes from 'prop-types'
 
 export const ProductsListItem = ({
     id,
-    adProductToCart,
+    addProductToCart,
     name,
     description,
     type,
@@ -63,7 +63,7 @@ export const ProductsListItem = ({
                 <CardActions className="wrap-btn-add-to-cart">
                     <Button
                         variant="outlined"
-                        onClick={() => adProductToCart(id, count)}
+                        onClick={() => addProductToCart(id, count)}
                     >
                         Add to cart
                     </Button>
