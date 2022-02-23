@@ -5,7 +5,6 @@ import { Main } from 'containers/Main/Main'
 import { Footer } from 'containers/Footer/Footer'
 import { productsArray } from 'components/products/productsArray'
 
-
 export const App = () => {
     const [productsInCart, setproductsInCart] = useState({
         1: 2,
@@ -13,9 +12,10 @@ export const App = () => {
     })
 
     const addProductToCart = (id, count) => {
-        setproductsInCart((prevState) =>
-            Object.assign({}, prevState, { [id]: prevState[id] + count })
-        )
+        setproductsInCart((prevState) => ({
+            ...prevState,
+            [id]: (prevState[id] || 0) + count,
+        }))
     }
 
     return (
