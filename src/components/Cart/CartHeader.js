@@ -24,7 +24,7 @@ export const CartHeader = ({ productsInCart }) => {
             <div>
             {keys(productsInCart).reduce((total, productId) => {
                 return (
-                totat + productsObject[productId].price *
+                total + productsObject[productId].price *
                 productsInCart[productId]
                 )
             },
