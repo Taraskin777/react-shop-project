@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { keys } from 'lodash'
 import { productsArray } from 'components/products/productsArray'
+import { Link } from 'react-router-dom'
 
 const productsObject = productsArray.reduce(
     (obj, product) => ({
@@ -22,15 +23,16 @@ export const CartHeader = ({ productsInCart }) => {
                 </div>
             ))}
             <div>
-            {keys(productsInCart).reduce((total, productId) => {
-                return (
-                total + productsObject[productId].price *
-                productsInCart[productId]
-                )
-            },
-                0
-            )
-            } 0$</div>
+                {keys(productsInCart).reduce((total, productId) => {
+                    return (
+                        total +
+                        productsObject[productId].price *
+                            productsInCart[productId]
+                    )
+                }, 0)}
+                $
+            </div>
+            <Link to="/cart">Show cart</Link>
         </div>
     )
 }
