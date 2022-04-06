@@ -6,7 +6,6 @@ import {
 } from 'components/products/productsArray'
 import { CartTotal } from 'components/Cart/CartTotal'
 
-
 export const CartPage = ({
     productsInCart,
     productsObject = getProductsObject(productsArray),
@@ -22,7 +21,7 @@ export const CartPage = ({
                         {productsObject[productId].price}
                     </div>
                 ))}
-               <CartTotal/>
+                <CartTotal productsInCart={productsInCart} />
             </div>
         </>
     )

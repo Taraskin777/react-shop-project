@@ -18,7 +18,7 @@ export const CartHeader = ({
                     {productsInCart[productId]}
                 </div>
             ))}
-            <CartTotal />
+            <CartTotal productsInCart={productsInCart} />
         </div>
     )
 }
