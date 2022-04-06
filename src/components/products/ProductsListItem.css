@@ -32,7 +32,23 @@
    
 }
 
+a {
+   color:white;
+   text-decoration: none;
+   transition: 0.5s;
+}
+
+a:hover {
+   /* font-size: 15px; */
+   font-weight: bold;
+   transition: 0.5s;
+}
 
 .nav-link {
-   color:black
+   color:white;
+  border: solid 1px white;
+  border-radius: 5px;
+   font-weight: bold;
+   transition: 0.5s;
+   padding: 3px;
 }
