@@ -4,8 +4,7 @@ import {
     productsArray,
     getProductsObject,
 } from 'components/products/productsArray'
-
-
+import { CartTotal } from './CartTotal'
 
 export const CartHeader = ({
     productsInCart,
@@ -19,16 +18,7 @@ export const CartHeader = ({
                     {productsInCart[productId]}
                 </div>
             ))}
-            <div>
-                {keys(productsInCart).reduce((total, productId) => {
-                    return (
-                        total +
-                        productsObject[productId].price *
-                            productsInCart[productId]
-                    )
-                }, 0)}
-                $
-            </div>
+            <CartTotal />
         </div>
     )
 }
