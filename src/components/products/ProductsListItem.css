@@ -23,7 +23,7 @@
 .product-quantity {
    display:flex;
    justify-content: center;
-   margin-top: 10px;
+   margin: 15px 0;
 }
 
 .product-quantity input {
