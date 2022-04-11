@@ -4,7 +4,7 @@ import { Header } from 'containers/Header/Header'
 import { Main } from 'containers/Main/Main'
 import { Footer } from 'containers/Footer/Footer'
 import { productsArray } from 'components/products/productsArray'
-import _ from 'lodash'
+import _, { omit } from 'lodash'
 
 export const App = () => {
     const [productsInCart, setProductsInCart] = useState({
@@ -21,9 +21,7 @@ export const App = () => {
 
     const removeProductFromCart = (productId) => {
         setProductsInCart((prevState) => {
-            const prevProductsInCart = { ...prevState }
-            delete prevProductsInCart[productId]
-            return prevProductsInCart
+            return omit(prevState, [productId])
         })
     }
 
