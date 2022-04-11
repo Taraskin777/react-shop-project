@@ -4,24 +4,34 @@ import { Header } from 'containers/Header/Header'
 import { Main } from 'containers/Main/Main'
 import { Footer } from 'containers/Footer/Footer'
 import { productsArray } from 'components/products/productsArray'
+import _ from 'lodash'
 
 export const App = () => {
-    const [productsInCart, setproductsInCart] = useState({
+    const [productsInCart, setProductsInCart] = useState({
         1: 2,
         2: 2,
     })
 
     const addProductToCart = (id, count) => {
-        setproductsInCart((prevState) => ({
+        setProductsInCart((prevState) => ({
             ...prevState,
             [id]: (prevState[id] || 0) + count,
         }))
+    }
+
+    const removeProductFromCart = (productId) => {
+        setProductsInCart((prevState) => {
+            const prevProductsInCart = { ...prevState }
+            delete prevProductsInCart[productId]
+            return prevProductsInCart
+        })
     }
 
     return (
         <>
             <CssBaseline />
             <Header productsInCart={productsInCart} />
+            <button onClick={() => removeProductFromCart(1)}>Delete</button>
             <Main
                 addProductToCart={addProductToCart}
                 productsInCart={productsInCart}
