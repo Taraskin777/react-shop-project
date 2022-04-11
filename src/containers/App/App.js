@@ -29,10 +29,10 @@ export const App = () => {
         <>
             <CssBaseline />
             <Header productsInCart={productsInCart} />
-            <button onClick={() => removeProductFromCart(1)}>Delete</button>
             <Main
                 addProductToCart={addProductToCart}
                 productsInCart={productsInCart}
+                removeProductFromCart={removeProductFromCart}
             />
             <Footer />
         </>
